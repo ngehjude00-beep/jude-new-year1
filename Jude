@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Happy New Year</title>
+<style>
+body{
+  margin:0;
+  height:100vh;
+  background:linear-gradient(135deg,#020024,#090979,#00d4ff);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:'Segoe UI',sans-serif;
+  overflow:hidden;
+  color:white;
+  text-align:center;
+}
+.container{animation:fadeIn 3s ease-in-out;}
+h1{font-size:3em;text-shadow:0 0 15px gold;}
+p{font-size:1.5em;margin-top:10px;}
+.sparkle{
+  position:absolute;
+  width:5px;height:5px;
+  background:white;border-radius:50%;
+  animation:float 6s infinite;
+}
+@keyframes fadeIn{
+  from{opacity:0;transform:scale(0.8);}
+  to{opacity:1;transform:scale(1);}
+}
+@keyframes float{
+  0%{transform:translateY(100vh);opacity:0;}
+  50%{opacity:1;}
+  100%{transform:translateY(-10vh);opacity:0;}
+}
+</style>
+</head>
+<body>
+
+<audio autoplay loop>
+  <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Kevin_MacLeod/Christmas/Kevin_MacLeod_-_We_Wish_You_a_Merry_Christmas.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+  <h1>🎉 Happy New Year 🎉</h1>
+  <p><strong>Jude wishes you a blessed and prosperous New Year</strong></p>
+  <p>✨ May joy, peace & success follow you ✨</p>
+</div>
+
+<script>
+for(let i=0;i<40;i++){
+  let s=document.createElement("div");
+  s.className="sparkle";
+  s.style.left=Math.random()*100+"vw";
+  s.style.animationDelay=Math.random()*5+"s";
+  document.body.appendChild(s);
+}
+</script>
+
+</body>
+</html>
